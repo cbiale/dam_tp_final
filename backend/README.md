@@ -29,8 +29,8 @@ Al usar Sequelize las tablas tienen el siguiente formato:
 
 dispositivos
 ```
-+----------------------------------+--------------+------+-----+---------+----------------+
-| Field                            | Type         | Null | Key | Default | Extra          |
++-------------------+--------------+------+-----+---------+----------------+
+| Field             | Type         | Null | Key | Default | Extra          |
 +-------------------+--------------+------+-----+---------+----------------+
 | dispositivo_id    | int(11)      | NO   | PRI | NULL    | auto_increment |
 | nombre            | varchar(255) | NO   |     | NULL    |                |
