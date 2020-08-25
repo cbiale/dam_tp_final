@@ -36,17 +36,16 @@ $ cd backend
 $ npm install
 ```
 
-2- Insertar datos iniciales:
+2- Insertar datos iniciales (solo primera vez que se ejecuta el sistema):
 
 ```sh
 $ nodejs ./db/db.js
 ```
 
-3- Instalar dependencias y ejecutar `servidor`
+3- Ejecutar `servidor`
 
 ```sh
-$ npm install
-$ node index.js
+$ nodejs index.js
 ```
 4- Instalar dependencias y ejecutar comando para compilar y servir `Ionic`:
 

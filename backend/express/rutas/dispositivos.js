@@ -26,7 +26,9 @@ async function obtenerPorId(req, res) {
 				{ model: models.electrovalvula }, // obtengo electrovalvula
 			], 
 			order : [
-				[ { model : models.medicion, as : "mediciones"}, 'fecha', 'DESC' ]
+				[ { model : models.medicion, as : "mediciones"}, 'fecha', 'DESC' ],
+				[ { model : models.medicion, as : "mediciones"}, 'medicionId', 'DESC' ]
+
 			]
 		}
 	);
@@ -89,7 +91,9 @@ async function obtenerMedicionesPorId(req, res) {
 				{ model: models.medicion, as : "mediciones"}, // obtengo mediciones
 			], 
 			order : [
-				[ { model : models.medicion, as : "mediciones"}, 'fecha', 'DESC' ]
+				[ { model : models.medicion, as : "mediciones"}, 'fecha', 'DESC' ],
+				[ { model : models.medicion, as : "mediciones"}, 'medicionId', 'DESC' ]
+
 			]
 		}
 	);
