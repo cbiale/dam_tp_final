@@ -13,7 +13,7 @@ El sistema permite:
 Tabla de contenidos:
 =========================
 * [Correr la aplicación](#Correr-la-aplicación)  
-* [Detener la aplicación](#Detener-la-aplicación)
+* [Consideraciones](#Consideraciones)
 * [Notas sobre el backend](#Notas-sobre-el-backend)
 * [Imágenes](#Imágenes)
 * [Contribuir](#Contribuir)
@@ -79,6 +79,8 @@ Se ha desarrollado un solo servicio en el backend, dado que no considere necesar
 - Insertar nuevo log.
 
 En el Backend se ha desarrollado el esquema de CRUD en dispositivos, electrovalvulas, mediciones y log-riegos. No se encuentran completas o testeadas todas las opciones.
+
+Los comentarios en el código tienen errores ortográficos, se debe a que mi teclado es en ingles y no instale la extensión de corrección en VSCode. Disculpe por ello.
 
 ## Notas sobre el backend
 
