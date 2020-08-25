@@ -14,7 +14,8 @@ Tabla de contenidos:
 =========================
 * [Correr la aplicación](#Correr-la-aplicación)  
 * [Detener la aplicación](#Detener-la-aplicación)
-* [Notas sobre el backend](#notas-sobre-el-backend)
+* [Notas sobre el backend](#Notas-sobre-el-backend)
+* [Imágenes](#Imágenes)
 * [Contribuir](#Contribuir)
 * [Licencia](#Licencia)
 
@@ -27,26 +28,40 @@ Para correr la aplicación es necesario descargar el repositorio y luego ejecuta
 1-  Levantar la base de datos (MariaDB) y Adminer:
 
 ```sh
-docker-compose up
+$ docker-compose up
 ```
+2- Instalar dependencias del servidor:
+
+```sh
+$ cd backend
+$ npm install
+```
+
 2- Insertar datos iniciales:
 
 ```sh
-
+$ nodejs ./db/db.js
 ```
 
-3- Ejecutar `nodemon`
+3- Instalar dependencias y ejecutar `servidor`
 
 ```sh
-nodemon ./backend/index.js
+$ npm install
+$ node index.js
 ```
+4- Instalar dependencias y ejecutar comando para compilar y servir `Ionic`:
 
-4- Ejecutar comando para compilar y servir Ionic:
-
+Si se encuentra en el directorio `backend`:
 ```sh
-ionic serve
+$ cd ..
 ```
 
+Ejecutar:
+
+```
+$ npm install
+$ ionic serve
+```
 
 ## Consideraciones
 
@@ -65,14 +80,30 @@ Se ha desarrollado un solo servicio en el backend, dado que no considere necesar
 - Insertar nueva medición.
 - Insertar nuevo log.
 
-En el Backend se armo el esquema de CRUD en dispositivos, electrovalvulas, mediciones y log-riegos. No se encuentran completas o testeadas todas las opciones.
-
-
+En el Backend se ha desarrollado el esquema de CRUD en dispositivos, electrovalvulas, mediciones y log-riegos. No se encuentran completas o testeadas todas las opciones.
 
 ## Notas sobre el backend
 
 Para obtener un detalle de los requerimientos y tablas generadas en el backend dirijase al siguiente enlace:
-[notas](backend/README.md)
+[notas](backend/readme.md)
+
+## Imágenes
+
+Listar dispositivos: 
+
+![](./imagenes/dispositivos.png)
+
+Ver dispositivo:
+
+![](./imagenes/ver-dispositivo.png)
+
+Ver mediciones:
+
+![](./imagenes/mediciones.png)
+
+Ver log de riegos:
+
+![](./imagenes/logs.png)
 
 ## Contribuir
 
