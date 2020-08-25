@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Dispositivo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="this.dispositivo !=null">
+
+    <div class="ion-text-center">
+      <div id="highcharts" style="width:100%; height:300px;"></div>
+
+      <ion-text color="danger">
+        <span>5 últimas mediciones: {{ valores }} </span>
+      </ion-text>
+
+      <ion-text color="primary">
+        <h5>Electroválvula asociada: {{dispositivo.electrovalvula.nombre}}</h5>
+      </ion-text>
+
+      <br />
+
+
+      <ion-button size="large" (click)= operarElectrovalvula() [disabled]="disableButton"> {{textoElectrovalvula}} </ion-button>
+
+      <ion-button size="large" color="medium" [routerLink]="['/ver-mediciones/', dispositivo.dispositivoId]">Ver
+        Mediciones</ion-button>
+      <ion-button size="large" color="medium"
+        [routerLink]="['/ver-logs/', dispositivo.electrovalvula.electrovalvulaId]">Ver Log de Riegos</ion-button>
+
+    </div>
+
+  </div>
+
+
+</ion-content>

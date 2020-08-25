@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb:10.3
+    hostname: db
+    restart: always
+    ports:
+      - 33060:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: DAM
+    networks: 
+      - dam-red
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    networks: 
+      - dam-red
+
+networks: 
+  dam-red:
+    driver: bridge

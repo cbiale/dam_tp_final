@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Dispositivos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated">
+      Lista de dispositivos
+    </ion-list-header>
+
+    <ion-item *ngFor="let dispositivo of dispositivos" class="item-label item ios in-list ion-focusable hydrated">
+
+      <ion-avatar slot="start">
+        <ion-icon size="large" name="pulse"></ion-icon>
+      </ion-avatar>
+
+      <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+        <h2>
+          {{dispositivo.dispositivoId}} - {{dispositivo.nombre}} :
+          <ion-text color="primary">
+            <!-- 
+              controlo por si no hay mediciones
+              a futuro esto debo cambiar para que se refresque solo
+              -->
+            <b *ngIf="dispositivo.mediciones.length > 0">
+              {{dispositivo.mediciones[0].valor}}
+            </b>
+          </ion-text>
+        </h2>
+        <h4>
+          <ion-icon name="pin"></ion-icon> {{dispositivo.ubicacion}}
+        </h4>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/ver-dispositivo/', dispositivo.dispositivoId, dispositivo.nombre]">
+          <ion-icon name="arrow-forward" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <!-- fab placed to the bottom start -->
+  <!--ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/agregar-dispositivo">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-->
+
+  <!--ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="actualizar()">
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-->
+
+</ion-content>

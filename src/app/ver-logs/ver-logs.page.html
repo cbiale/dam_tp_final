@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>    
+    <ion-title>
+      Log de la Electroválvula {{this.id}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list class="ios list-ios hydrated">
+    <ion-list-header class="ios hydrated">
+      Historial de Logs
+    </ion-list-header>
+
+    <ion-item *ngFor="let l of logRiegos" class="item-label item ios in-list ion-focusable hydrated">
+
+      <ion-label class="sc-ion-label-ios-h sc-ion-label-ios-s ios hydrated">
+        <h2>
+          {{l.fecha | formatoFecha}}  {{l.apertura | formatoEstado }} 
+        </h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!--ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="actualizar()">
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-->
+
+</ion-content>
