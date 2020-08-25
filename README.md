@@ -22,21 +22,52 @@ Tabla de contenidos:
 
 ## Correr la aplicación
 
-Para correr la aplicación es necesario descargar el repositorio y luego ejecutar el siguiente comando:
+Para correr la aplicación es necesario descargar el repositorio y luego ejecutar los siguientes comandos:
+
+1-  Levantar la base de datos (MariaDB) y Adminer:
 
 ```sh
 docker-compose up
 ```
-
-## Detener la aplicación
-
-Para detener la aplicación es necesario ejecutar el siguiente comando:
+2- Insertar datos iniciales:
 
 ```sh
-docker-compose down
+
 ```
 
-También es posible realizar `Ctrl-C` desde el shell donde se encuentra corriendo el sistema.
+3- Ejecutar `nodemon`
+
+```sh
+nodemon ./backend/index.js
+```
+
+4- Ejecutar comando para compilar y servir Ionic:
+
+```sh
+ionic serve
+```
+
+
+## Consideraciones
+
+En la pantalla de dispositivo se activa un callback para simular llegada de valores nuevos (cada 30 segundos). El funcionamiento se encuentra comentado en `controlMediciones` dentro del archivo `ver-dispositivo.page.ts`.
+
+Se han desarrollado dos pipes, para ver su código fuente debe ir al directorio [pipes](src/app/pipes). Uno especifica un formato de fecha y el otro de acuerdo al valor de estado de la electroválvula permite especificar *Encendido* o *Apagado*.
+
+
+Se ha desarrollado una directiva, para ver su código fuente debe ir al directorio [directivas](src/app/directivas). De acuerdo a un valor que recibe como argumento (el valor de una lectura), muestra la misma en verde (valor <= 10), amarillo (valor > 10 y <= 30) o rojo (valor > 30).
+
+Se ha desarrollado un solo servicio en el backend, dado que no considere necesario desarrollar varios, porque eran pocos tipos de peticiones. Las peticiones soportadas son:
+- Obtener listado de dispositivos.
+- Obtener datos de un dispositivo.
+- Obtener mediciones de un dispositivo.
+- Obtener logs de una electroválvula.
+- Insertar nueva medición.
+- Insertar nuevo log.
+
+En el Backend se armo el esquema de CRUD en dispositivos, electrovalvulas, mediciones y log-riegos. No se encuentran completas o testeadas todas las opciones.
+
+
 
 ## Notas sobre el backend
 

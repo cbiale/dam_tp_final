@@ -71,7 +71,7 @@ export class DispositivoService {
       });
   }
 
-  // inserto nueva medicion
+  // inserto nuevo log
   async nuevoLog(id : number, apertura : number): Promise<any> {
     return this.http.post<any>('' + this.rutaApiLogRiego, {'electrovalvulaId': id, 'apertura': apertura }).toPromise()
       .then((retorno: any) => {
