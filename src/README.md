@@ -43,14 +43,6 @@ También es posible realizar `Ctrl-C` desde el shell donde se encuentra corriend
 Para obtener un detalle de los requerimientos y tablas generadas en el backend dirijase al siguiente enlace:
 [notas](backend/README.md)
 
-## API
-
-| Método | Punto Final |  Uso | Recibe | Retorna |
-| ---- | ---- | ---- | ---- | ---- |
-| GET | /devices | Obtiene los dispositivos existentes | Filtro | Dispositivos |
-| GET | /devices/{id} | Obtiene datos de un dispositivo |  | Dispositivo |
-| POST | /devices | Cambia el estado de un dispositivo | Estado | Estado |
-
 ## Contribuir
 
 Para contribuir realizar un pull request con las sugerencias.
