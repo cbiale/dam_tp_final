@@ -85,7 +85,7 @@ Los comentarios en el código tienen errores ortográficos, se debe a que mi tec
 ## Notas sobre el backend
 
 Para obtener un detalle de los requerimientos y tablas generadas en el backend dirijase al siguiente enlace:
-[notas](backend/readme.md)
+[notas](backend/README.md)
 
 ## Imágenes
 
