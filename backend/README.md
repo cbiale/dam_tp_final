@@ -6,7 +6,7 @@ Para el uso de [Sequelize](https://sequelize.org/) en el proyecto con [Express](
 
 ## Requerimientos
 
-Tener funcionando **nodejs** con **sequelize** y **mysql2**.
+Tener funcionando **nodejs** con **sequelize**, **mysql2** y **Cors**.
 
 El sistema fue probado en Node 10.19, para controlar su versionado ejecute:
 
