@@ -20,7 +20,6 @@ Tabla de contenidos:
 * [Licencia](#Licencia)
 
 
-
 ## Correr la aplicación
 
 Para correr la aplicación es necesario descargar el repositorio y luego ejecutar los siguientes comandos:

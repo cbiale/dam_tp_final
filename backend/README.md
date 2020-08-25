@@ -14,7 +14,7 @@ El sistema fue probado en Node 10.19, para controlar su versionado ejecute:
 $ nodejs -v
 ```
 
-Para instalar Sequelize, el adaptador MySQL, cors y body-parser usado para conectarse a MariaDB se ha ejecutado:
+Para instalar Sequelize, el adaptador MySQL usado para conectarse a MariaDB, cors y body-parser se ha ejecutado:
 
 ```
 $ npm i sequelize
